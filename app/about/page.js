@@ -54,7 +54,7 @@ export default function About() {
           }}
         >
           <Image
-            href="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&q=80"
+            href="../../public/photo-1521334884684-d80222895322.avif"
             alt="Fashion Hero"
             width={1600}
             height={480}
@@ -110,7 +110,7 @@ export default function About() {
         </div>
 
         <Image
-          href="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"
+          href="../../public/style-1.avif"
           alt="Our Boutique"
           width={800}
           height={600}
@@ -182,7 +182,7 @@ export default function About() {
           }}
         >
           <Image
-            href="https://thevou.com/wp-content/uploads/2024/11/current-mens-fashion-trends.jpg"
+            href="../../public/trend-1.jpg"
             alt="Fashion look 1"
             width={400}
             height={895}
@@ -195,7 +195,7 @@ export default function About() {
             }}
           />
           <Image
-            href="https://rare-gallery.com/mocahbig/1345691-Thomas-Shelby-Cillian-MurphyPeaky-Blinders-HD-Wallpaper.jpg"
+            href="../../public/trend-2.jpg"
             alt="Fashion look 2"
             width={400}
             height={700}
@@ -208,7 +208,7 @@ export default function About() {
             }}
           />
           <Image
-            href="https://media.gettyimages.com/id/107961779/photo/fifa-ballon-dor-gala-2010.jpg?s=1024x1024&w=gi&k=20&c=ojyMola6XG-AvFZ_-DskwXOpG7oX07IHAZrVCc1W4so="
+            href="../../public/messi.jpg"
             alt="Fashion look 3"
             width={400}
             height={750}
