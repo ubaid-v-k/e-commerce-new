@@ -1,95 +1,91 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import Link from 'next/link';
+import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const featuredProducts = [
+    {
+      id: 1,
+      name: 'Wireless Headphones',
+      price: 79.99,
+      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
+    },
+    {
+      id: 2,
+      name: 'Smart Watch',
+      price: 199.99,
+      image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop',
+    },
+    {
+      id: 4,
+      name: 'Laptop Stand',
+      price: 49.99,
+      image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop',
+    },
+  ];
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      {/* Hero Section */}
+      <div className="hero-section text-center">
+        <Container>
+          <h1 className="display-3 fw-bold mb-4">Welcome to E-Shop</h1>
+          <p className="lead mb-4">Discover amazing products at unbeatable prices</p>
+          <Button as={Link} href="/products" variant="light" size="lg">
+            Shop Now
+          </Button>
+        </Container>
+      </div>
+
+      {/* Featured Products */}
+      <Container className="my-5">
+        <h2 className="text-center mb-4">Featured Products</h2>
+        <Row>
+          {featuredProducts.map((product) => (
+            <Col key={product.id} md={4} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src={product.image} className="product-img" />
+                <Card.Body>
+                  <Card.Title>{product.name}</Card.Title>
+                  <Card.Text className="fw-bold text-primary">
+                    ${product.price.toFixed(2)}
+                  </Card.Text>
+                  <Button as={Link} href={`/products/${product.id}`} variant="primary">
+                    View Details
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <div className="text-center mt-4">
+          <Button as={Link} href="/products" variant="outline-primary" size="lg">
+            View All Products
+          </Button>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </Container>
+
+      {/* Features Section */}
+      <Container className="my-5 py-5 bg-light rounded">
+        <Row className="text-center">
+          <Col md={4} className="mb-4">
+            <div className="display-4 mb-3">🚚</div>
+            <h4>Free Shipping</h4>
+            <p>On orders over $50</p>
+          </Col>
+          <Col md={4} className="mb-4">
+            <div className="display-4 mb-3">🔒</div>
+            <h4>Secure Payment</h4>
+            <p>100% secure transactions</p>
+          </Col>
+          <Col md={4} className="mb-4">
+            <div className="display-4 mb-3">↩️</div>
+            <h4>Easy Returns</h4>
+            <p>30-day return policy</p>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
