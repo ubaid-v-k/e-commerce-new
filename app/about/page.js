@@ -1,14 +1,9 @@
-// This component remains a Server Component (no "use client")
-// assuming you have created a separate Client Component for the button.
-// import ExploreButton from '@/components/ExploreButton'; 
-
-// For this code to run without error, you MUST import the ExploreButton
-// which contains the interactive logic (onMouseOver/onMouseOut).
+import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   const primaryColor = "#e91e63";
 
-  // New Values Data with updated descriptions
   const values = [
     {
       icon: "🌿",
@@ -40,7 +35,7 @@ export default function About() {
         fontFamily: "'Poppins', sans-serif",
       }}
     >
-      {/* HERO SECTION - Updated Text */}
+      {/* HERO SECTION */}
       <section
         style={{
           width: "100%",
@@ -58,15 +53,18 @@ export default function About() {
             marginBottom: "50px",
           }}
         >
-          <img
-            src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&q=80"
+          <Image
+            href="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&q=80"
             alt="Fashion Hero"
+            width={1600}
+            height={480}
             style={{
               width: "100%",
               height: "480px",
               objectFit: "cover",
               filter: "brightness(75%)",
             }}
+            priority
           />
           <div
             style={{
@@ -77,20 +75,20 @@ export default function About() {
               color: "#fff",
               textShadow: "0 4px 10px rgba(0,0,0,0.5)",
               maxWidth: "800px",
-              padding: "0 20px"
+              padding: "0 20px",
             }}
           >
             <h1 style={{ fontSize: "52px", fontWeight: "700", marginBottom: "15px" }}>
-              VogueThreads: Dress for the Life You're Building.
+              VogueThreads: Dress for the Life You&apos;re Building.
             </h1>
             <p style={{ fontSize: "18px", margin: "0 auto" }}>
-              We don’t just sell clothes; we curate the confidence you wear. Explore the future of your style with pieces built to last.
+              We don&apos;t just sell clothes; we curate the confidence you wear. Explore the future of your style with pieces built to last.
             </p>
           </div>
         </div>
       </section>
 
-      {/* STORY SECTION - Updated Text */}
+      {/* STORY SECTION */}
       <section
         style={{
           display: "grid",
@@ -104,16 +102,18 @@ export default function About() {
         <div>
           <h2 style={{ fontSize: "32px", fontWeight: "600", marginBottom: "20px" }}>Beyond the Fabric: Our Vision</h2>
           <p style={{ color: "#555", lineHeight: "1.8", marginBottom: "25px" }}>
-            VogueThreads was founded not to follow trends, but to **redefine them**. We saw a fashion world built on fast cycles and fleeting quality. Our mission, since 2020, has been to slow it down—creating a collection where **timeless design meets uncompromising quality**. We are a global movement for those who see clothing as a canvas for self-expression.
+            VogueThreads was founded not to follow trends, but to <strong>redefine them</strong>. We saw a fashion world built on fast cycles and fleeting quality. Our mission, since 2020, has been to slow it down—creating a collection where <strong>timeless design meets uncompromising quality</strong>. We are a global movement for those who see clothing as a canvas for self-expression.
           </p>
           <p style={{ color: "#555", lineHeight: "1.8" }}>
-            Every item is meticulously sourced, balancing **luxury-grade craftsmanship** with a commitment to ethical and **sustainable production**. We ensure that when you invest in VogueThreads, you're not just buying a look—you're buying a long-term piece of your personal style journey.
+            Every item is meticulously sourced, balancing <strong>luxury-grade craftsmanship</strong> with a commitment to ethical and <strong>sustainable production</strong>. We ensure that when you invest in VogueThreads, you&apos;re not just buying a look—you&apos;re buying a long-term piece of your personal style journey.
           </p>
         </div>
 
-        <img
-          src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"
+        <Image
+          href="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"
           alt="Our Boutique"
+          width={800}
+          height={600}
           style={{
             width: "100%",
             borderRadius: "20px",
@@ -123,7 +123,7 @@ export default function About() {
         />
       </section>
 
-      {/* VALUES SECTION - Updated Descriptions */}
+      {/* VALUES SECTION */}
       <section
         style={{
           maxWidth: "1100px",
@@ -157,7 +157,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* GALLERY SECTION - Unchanged */}
+      {/* GALLERY SECTION */}
       <section
         style={{
           maxWidth: "1200px",
@@ -181,9 +181,11 @@ export default function About() {
             gap: "20px",
           }}
         >
-          <img
-            src="https://thevou.com/wp-content/uploads/2024/11/current-mens-fashion-trends.jpg"
+          <Image
+            href="https://thevou.com/wp-content/uploads/2024/11/current-mens-fashion-trends.jpg"
             alt="Fashion look 1"
+            width={400}
+            height={895}
             style={{
               width: "100%",
               height: "895px",
@@ -192,20 +194,24 @@ export default function About() {
               boxShadow: "0 6px 25px rgba(0,0,0,0.1)",
             }}
           />
-          <img
-            src="https://rare-gallery.com/mocahbig/1345691-Thomas-Shelby-Cillian-MurphyPeaky-Blinders-HD-Wallpaper.jpg"
+          <Image
+            href="https://rare-gallery.com/mocahbig/1345691-Thomas-Shelby-Cillian-MurphyPeaky-Blinders-HD-Wallpaper.jpg"
             alt="Fashion look 2"
+            width={400}
+            height={700}
             style={{
               width: "100%",
-              height: "300px",
+              height: "700px",
               objectFit: "cover",
               borderRadius: "15px",
               boxShadow: "0 6px 25px rgba(0,0,0,0.1)",
             }}
           />
-          <img
-            src="https://media.gettyimages.com/id/107961779/photo/fifa-ballon-dor-gala-2010.jpg?s=1024x1024&w=gi&k=20&c=ojyMola6XG-AvFZ_-DskwXOpG7oX07IHAZrVCc1W4so="
+          <Image
+            href="https://media.gettyimages.com/id/107961779/photo/fifa-ballon-dor-gala-2010.jpg?s=1024x1024&w=gi&k=20&c=ojyMola6XG-AvFZ_-DskwXOpG7oX07IHAZrVCc1W4so="
             alt="Fashion look 3"
+            width={400}
+            height={750}
             style={{
               width: "100%",
               height: "750px",
@@ -217,7 +223,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA SECTION - Updated Content and structure for Client Component use */}
+      {/* CTA SECTION */}
       <section
         style={{
           textAlign: "center",
@@ -229,15 +235,10 @@ export default function About() {
           Your Next Chapter of Style Starts Now
         </h2>
         <p style={{ color: "#555", lineHeight: "1.8", marginBottom: "30px" }}>
-          Ready to upgrade your wardrobe with pieces that are as confident and enduring as you are? Join the **VogueThreads community** and discover the difference intentional design makes.
+          Ready to upgrade your wardrobe with pieces that are as confident and enduring as you are? Join the <strong>VogueThreads community</strong> and discover the difference intentional design makes.
         </p>
-        
-        {/*
-          IMPORTANT: This is where you would use the imported Client Component.
-          If you are unable to create a separate file, you must remove the
-          onMouseOver and onMouseOut props for this code to work in a Server Component.
-        */}
-        <a
+
+        <Link
           href="/shop"
           style={{
             display: "inline-block",
@@ -249,11 +250,9 @@ export default function About() {
             textDecoration: "none",
             transition: "0.3s",
           }}
-          // The event handlers are removed here to make it compatible
-          // as a standard Server Component render.
         >
           Shop The Latest Collections
-        </a>
+        </Link>
       </section>
     </div>
   );

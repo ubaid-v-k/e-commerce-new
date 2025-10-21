@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container, Row, Col, Card, Button, Table, Form } from 'react-bootstrap';
 import { useCart } from '@/context/CartContext';
@@ -44,11 +45,13 @@ export default function CartPage() {
                     <tr key={item.id}>
                       <td>
                         <div className="d-flex align-items-center">
-                          <img
+                          <Image
                             src={item.image}
                             alt={item.name}
-                            className="cart-item-img rounded me-3"
-                            style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                            width={60}
+                            height={60}
+                            className="rounded me-3"
+                            style={{ objectFit: 'cover' }}
                           />
                           <div>
                             <strong>{item.name}</strong>

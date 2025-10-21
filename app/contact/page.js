@@ -21,11 +21,9 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app, you would send this data to your backend
     console.log('Form submitted:', formData);
     setSubmitted(true);
-    
-    // Reset form after 3 seconds
+
     setTimeout(() => {
       setFormData({ name: '', email: '', subject: '', message: '' });
       setSubmitted(false);
@@ -34,24 +32,26 @@ export default function ContactPage() {
 
   return (
     <Container className="my-5">
+      {/* HEADER */}
       <Row className="mb-5">
         <Col>
           <h1 className="mb-4">Contact Us</h1>
           <p className="lead">
-            Have a question or need assistance? We'd love to hear from you!
+            Have a question or need assistance? We&apos;d love to hear from you!
           </p>
         </Col>
       </Row>
 
+      {/* CONTACT FORM */}
       <Row>
         <Col lg={8} className="mb-4">
           <Card>
             <Card.Body>
               <h3 className="mb-4">Send us a Message</h3>
-              
+
               {submitted && (
                 <Alert variant="success" onClose={() => setSubmitted(false)} dismissible>
-                  Thank you for your message! We'll get back to you soon.
+                  Thank you for your message! We&apos;ll get back to you soon.
                 </Alert>
               )}
 
@@ -118,6 +118,7 @@ export default function ContactPage() {
           </Card>
         </Col>
 
+        {/* CONTACT DETAILS */}
         <Col lg={4}>
           <Card className="mb-4">
             <Card.Body>
@@ -173,13 +174,14 @@ export default function ContactPage() {
         </Col>
       </Row>
 
+      {/* FAQ SECTION */}
       <Row className="mt-5">
         <Col>
           <Card className="bg-light">
             <Card.Body className="text-center py-5">
               <h3 className="mb-3">Frequently Asked Questions</h3>
               <p className="mb-4">
-                Looking for quick answers? Check out our FAQ section for common questions 
+                Looking for quick answers? Check out our FAQ section for common questions
                 about shipping, returns, payments, and more.
               </p>
               <Button variant="outline-primary">Visit FAQ</Button>
