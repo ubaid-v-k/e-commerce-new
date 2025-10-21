@@ -54,7 +54,7 @@ export default function About() {
           }}
         >
           <Image
-            href="../../public/photo-1521334884684-d80222895322.avif"
+            src="/photo-1521334884684-d80222895322.avif"
             alt="Fashion Hero"
             width={1600}
             height={480}
@@ -110,7 +110,7 @@ export default function About() {
         </div>
 
         <Image
-          href="../../public/style-1.avif"
+          src="/style-1.avif"
           alt="Our Boutique"
           width={800}
           height={600}
@@ -182,7 +182,7 @@ export default function About() {
           }}
         >
           <Image
-            href="../../public/trend-1.jpg"
+            src="/trend-1.jpg"
             alt="Fashion look 1"
             width={400}
             height={895}
@@ -195,20 +195,20 @@ export default function About() {
             }}
           />
           <Image
-            href="../../public/trend-2.jpg"
+            src="/trend-2.jpg"
             alt="Fashion look 2"
             width={400}
             height={700}
             style={{
               width: "100%",
-              height: "700px",
+              height: "400px",
               objectFit: "cover",
               borderRadius: "15px",
               boxShadow: "0 6px 25px rgba(0,0,0,0.1)",
             }}
           />
           <Image
-            href="../../public/messi.jpg"
+            src="/messi.jpg"
             alt="Fashion look 3"
             width={400}
             height={750}
